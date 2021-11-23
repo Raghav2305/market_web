@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Contact Page {% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0">
+    <img src="static/img/contact_phone.jfif" class='d-block w-100 mx-0'>
+</div>
+<div class="container my-4">
+    <h1 class='text-center my-4'>Contact US 📞</h1>
+    <form method="post" action="/contact">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address 📧</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else 🔐</div>
+        </div>
+
+        <br>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Tell us the issue you are facing 🤔</label>
+            <input name="issue" type="text" class="form-control" id="issue">
+        </div>
+        {% comment %} <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> {% endcomment %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}
