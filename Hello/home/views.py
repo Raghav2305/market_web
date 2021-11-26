@@ -24,3 +24,6 @@ def contact(request):
 
 def services(request):
     return render(request, 'services.html')
+
+def templates(request):
+    return render(request, 'contact.html')
