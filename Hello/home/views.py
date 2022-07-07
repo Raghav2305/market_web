@@ -8,22 +8,30 @@ from django.contrib import messages
 def index(request):
     return render(request, 'index.html')
 
+
 def about(request):
     return render(request, 'about.html')
+
 
 def contact(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         desc = request.POST.get('issue')
-        
+
         contact = Contact(email=email, desc=desc, date=datetime.today())
         contact.save()
         messages.success(request, 'Your query has been sent!')
 
     return render(request, 'contact.html')
 
+
 def services(request):
     return render(request, 'services.html')
 
+
 def templates(request):
     return render(request, 'contact.html')
+
+
+def pricing(request):
+    return render(request, 'pricing.html')

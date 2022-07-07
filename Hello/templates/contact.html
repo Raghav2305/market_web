@@ -10,14 +10,14 @@
     <form method="post" action="/contact">
         {% csrf_token %}
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address 📧</label>
+            <label for="exampleInputEmail1" class="form-label"><b>Email address 📧</b> </label>
             <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else 🔐</div>
+            <div id="emailHelp" class="form-text"><b>We'll never share your email with anyone else 🔐</b> </div>
         </div>
 
         <br>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Tell us the issue you are facing 🤔</label>
+            <label for="exampleInputPassword1" class="form-label"> <b> Tell us the issue you are facing 🤔 </b> </label>
             <input name="issue" type="text" class="form-control" id="issue">
         </div>
         {% comment %} <div class="mb-3 form-check">
